@@ -80,6 +80,71 @@ namespace HowLucky
                     Console.ReadLine();
 
                 }
+
+                else if (pick == "2")
+                {
+                    string game = (dashes + "QUAD PICK" + dashes);
+                    string pick1;
+                    string pick2;
+                    string pick3;
+                    string pick4;
+
+                    int winner1 = rng.Next(0, 10);
+                    int winner2 = rng.Next(0, 10);
+                    int winner3 = rng.Next(0, 10);
+                    int winner4 = rng.Next(0, 10);
+
+                    Console.WriteLine(game);
+                    Console.WriteLine();
+
+                    Console.WriteLine("For this game, you get to pick FOUR numbers between 0-10. " +
+                                      "You can pick the same number more than once.");
+                    Console.WriteLine("If you match all FOUR numbers, in the same order, you win!");
+                    Console.WriteLine();
+                    Console.WriteLine("Please Pick A Number Between 0-10");
+                    pick1 = Console.ReadLine();
+
+                    Console.Clear();
+
+                    Console.WriteLine(game);
+                    Console.WriteLine();
+                    Console.WriteLine("Please Pick Another Number Between 0-10");
+                    pick2 = Console.ReadLine();
+
+                    Console.Clear();
+
+                    Console.WriteLine(game);
+                    Console.WriteLine();
+                    Console.WriteLine("Please Pick Another Number Between 0-10");
+                    pick3 = Console.ReadLine();
+
+                    Console.Clear();
+
+                    Console.WriteLine(game);
+                    Console.WriteLine();
+                    Console.WriteLine("Please Pick Your Final Number Between 0-10");
+                    pick4 = Console.ReadLine();
+
+                    Console.Clear();
+
+                    Console.WriteLine(game);
+                    Console.WriteLine();
+                    Console.WriteLine("And the winning numbers are....");
+                    Console.WriteLine(winner1);
+                    Console.WriteLine(winner2);
+                    Console.WriteLine(winner3);
+                    Console.WriteLine(winner4);
+
+                    if (pick1 == winner1.ToString() && pick2 == winner2.ToString() && pick3 == winner3.ToString()
+                        && pick4 == winner4.ToString())
+                        Console.WriteLine("YOU WIN!");
+
+                    else
+                        Console.WriteLine("Sorry, you didn't win this time.");
+
+                    Console.ReadLine();
+
+                }
             }
 
             while (pick != "4");
