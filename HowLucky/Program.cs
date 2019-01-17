@@ -67,6 +67,7 @@ namespace HowLucky
 
                     Console.WriteLine(game);
                     Console.WriteLine();
+                    Console.WriteLine("Your numbers are: {0}, {1}, {2}", pick1, pick2, pick3);
                     Console.WriteLine("And the winning numbers are....");
                     Console.WriteLine(winner1);
                     Console.WriteLine(winner2);
@@ -129,6 +130,7 @@ namespace HowLucky
 
                     Console.WriteLine(game);
                     Console.WriteLine();
+                    Console.WriteLine("Your numbers are: {0}, {1}, {2}, {3}", pick1, pick2, pick3, pick4);
                     Console.WriteLine("And the winning numbers are....");
                     Console.WriteLine(winner1);
                     Console.WriteLine(winner2);
