@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 
 namespace HowLucky
@@ -67,10 +68,14 @@ namespace HowLucky
 
                     Console.WriteLine(game);
                     Console.WriteLine();
-                    Console.WriteLine("Your numbers are: {0}, {1}, {2}", pick1, pick2, pick3);
+                    Console.WriteLine($"Your numbers are: {pick1}, {pick2}, {pick3}");
+                    // Console.WriteLine("Your numbers are: {0}, {1}, {2}", pick1, pick2, pick3);  **same output as line above
                     Console.WriteLine("And the winning numbers are....");
+                    Thread.Sleep(1000);
                     Console.WriteLine(winner1);
+                    Thread.Sleep(1000);
                     Console.WriteLine(winner2);
+                    Thread.Sleep(1000);
                     Console.WriteLine(winner3);
 
                     if (pick1 == winner1.ToString() && pick2 == winner2.ToString() && pick3 == winner3.ToString())
@@ -130,11 +135,15 @@ namespace HowLucky
 
                     Console.WriteLine(game);
                     Console.WriteLine();
-                    Console.WriteLine("Your numbers are: {0}, {1}, {2}, {3}", pick1, pick2, pick3, pick4);
+                    Console.WriteLine($"Your numbers are: {pick1}, {pick2}, {pick3}, {pick4}");
                     Console.WriteLine("And the winning numbers are....");
+                    Thread.Sleep(1000);
                     Console.WriteLine(winner1);
+                    Thread.Sleep(1000);
                     Console.WriteLine(winner2);
+                    Thread.Sleep(1000);
                     Console.WriteLine(winner3);
+                    Thread.Sleep(1000);
                     Console.WriteLine(winner4);
 
                     if (pick1 == winner1.ToString() && pick2 == winner2.ToString() && pick3 == winner3.ToString()
