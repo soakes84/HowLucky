@@ -22,8 +22,7 @@ namespace HowLucky
                 Console.WriteLine();
                 Console.WriteLine("1: Triple Pick");
                 Console.WriteLine("2: Quad Pick");
-                Console.WriteLine("3: Mega Pick");
-                Console.WriteLine("4: End Game");
+                Console.WriteLine("3: End Game");
 
                 pick = Console.ReadLine();
 
@@ -81,7 +80,8 @@ namespace HowLucky
                     if (pick1 == winner1.ToString() && pick2 == winner2.ToString() && pick3 == winner3.ToString())
                         Console.WriteLine("YOU WIN!");
                     else
-                        Console.WriteLine("Sorry, you didn't win this time.");
+                        Console.WriteLine("Sorry, you didn't win this time. \n" +
+                            "Please hit enter to continue.");
 
                     Console.ReadLine();
 
@@ -151,14 +151,15 @@ namespace HowLucky
                         Console.WriteLine("YOU WIN!");
 
                     else
-                        Console.WriteLine("Sorry, you didn't win this time.");
+                        Console.WriteLine("Sorry, you didn't win this time. \n" +
+                            "Please hit enter to continue.");
 
                     Console.ReadLine();
 
                 }
             }
 
-            while (pick != "4");
+            while (pick != "3");
 
             Console.ReadLine();
         }
