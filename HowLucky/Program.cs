@@ -11,6 +11,8 @@ namespace HowLucky
     {
         static void Main(string[] args)
         {
+            Console.Title = "How Lucky Are You?";
+
             string pick;
             string dashes = new string('-', 15);
 
