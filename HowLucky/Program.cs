@@ -78,13 +78,11 @@ namespace HowLucky
                     Console.WriteLine(winner3);
 
                     if (pick1 == winner1.ToString() && pick2 == winner2.ToString() && pick3 == winner3.ToString())
-                        Console.WriteLine("YOU WIN!");
+                        YouWin();
                     else
-                        Console.WriteLine("Sorry, you didn't win this time. \n" +
-                            "Please hit enter to continue.");
+                        YouLose();
 
                     Console.ReadLine();
-
                 }
 
                 else if (pick == "2")
@@ -148,11 +146,10 @@ namespace HowLucky
 
                     if (pick1 == winner1.ToString() && pick2 == winner2.ToString() && pick3 == winner3.ToString()
                         && pick4 == winner4.ToString())
-                        Console.WriteLine("YOU WIN!");
+                        YouWin();
 
                     else
-                        Console.WriteLine("Sorry, you didn't win this time. \n" +
-                            "Please hit enter to continue.");
+                        YouLose();
 
                     Console.ReadLine();
 
@@ -162,6 +159,21 @@ namespace HowLucky
             while (pick != "3");
 
             Console.ReadLine();
+        }
+
+        static void YouWin()
+        {
+            Console.ForegroundColor = ConsoleColor.Green;
+            Console.WriteLine("$$$$ You Win $$$$");
+            Console.ResetColor();
+        }
+
+        static void YouLose()
+        {
+            Console.ForegroundColor = ConsoleColor.DarkRed;
+            Console.WriteLine("Sorry, you didn't win this time. \n" +
+                "Please hit enter to continue.");
+            Console.ResetColor();
         }
     }
 }
