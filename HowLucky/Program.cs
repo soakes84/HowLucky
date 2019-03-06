@@ -137,6 +137,7 @@ namespace HowLucky
                     Console.WriteLine();
                     Console.WriteLine($"Your numbers are: {pick1}, {pick2}, {pick3}, {pick4}");
                     Console.WriteLine("And the winning numbers are....");
+                    Console.ForegroundColor = ConsoleColor.Blue;
                     Thread.Sleep(1000);
                     Console.WriteLine(winner1);
                     Thread.Sleep(1000);
