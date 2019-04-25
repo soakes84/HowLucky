@@ -14,6 +14,13 @@ namespace HowLucky
             Console.Title = "How Lucky Are You?";
 
             string pick;
+            string quickPick;
+
+            int quickPick1;
+            int quickPick2;
+            int quickPick3;
+            int quickPick4;
+
             string dashes = new string('-', 15);
 
             Random rng = new Random();
@@ -48,44 +55,84 @@ namespace HowLucky
                                       "You can pick the same number more than once.");
                     Console.WriteLine("If you match all THREE numbers, in the same order, you win!");
                     Console.WriteLine();
-                    Console.WriteLine("Please Pick A Number Between 0-10");
-                    pick1 = Console.ReadLine();
+                    Console.WriteLine("Enter 1 to pick your own numbers or enter 2 for Quick Pick");
+                    quickPick = Console.ReadLine();
 
-                    Console.Clear();
+                    if(quickPick == "1")
+                    {
+                        Console.WriteLine("Please Pick A Number Between 0-10");
+                        pick1 = Console.ReadLine();
 
-                    Console.WriteLine(game);
-                    Console.WriteLine();
-                    Console.WriteLine("Please Pick Another Number Between 0-10");
-                    pick2 = Console.ReadLine();
+                        Console.Clear();
 
-                    Console.Clear();
+                        Console.WriteLine(game);
+                        Console.WriteLine();
+                        Console.WriteLine("Please Pick Another Number Between 0-10");
+                        pick2 = Console.ReadLine();
 
-                    Console.WriteLine(game);
-                    Console.WriteLine();
-                    Console.WriteLine("Please Pick Your Final Number Between 0-10");
-                    pick3 = Console.ReadLine();
+                        Console.Clear();
 
-                    Console.Clear();
+                        Console.WriteLine(game);
+                        Console.WriteLine();
+                        Console.WriteLine("Please Pick Your Final Number Between 0-10");
+                        pick3 = Console.ReadLine();
 
-                    Console.WriteLine(game);
-                    Console.WriteLine();
-                    Console.WriteLine($"Your numbers are: {pick1}, {pick2}, {pick3}");
-                    // Console.WriteLine("Your numbers are: {0}, {1}, {2}", pick1, pick2, pick3);  **same output as line above
-                    Console.WriteLine("And the winning numbers are....");
-                    Console.ForegroundColor = ConsoleColor.Blue;
-                    Thread.Sleep(1000);
-                    Console.WriteLine(winner1);
-                    Thread.Sleep(1000);
-                    Console.WriteLine(winner2);
-                    Thread.Sleep(1000);
-                    Console.WriteLine(winner3);
+                        Console.Clear();
 
-                    if (pick1 == winner1.ToString() && pick2 == winner2.ToString() && pick3 == winner3.ToString())
-                        YouWin();
-                    else
-                        YouLose();
+                        Console.WriteLine(game);
+                        Console.WriteLine();
+                        Console.WriteLine($"Your numbers are: {pick1}, {pick2}, {pick3}");
+                        // Console.WriteLine("Your numbers are: {0}, {1}, {2}", pick1, pick2, pick3);  **same output as line above
+                        Console.WriteLine("And the winning numbers are....");
+                        Console.ForegroundColor = ConsoleColor.Blue;
+                        Thread.Sleep(1000);
+                        Console.WriteLine(winner1);
+                        Thread.Sleep(1000);
+                        Console.WriteLine(winner2);
+                        Thread.Sleep(1000);
+                        Console.WriteLine(winner3);
 
-                    Console.ReadLine();
+                        if (pick1 == winner1.ToString() && pick2 == winner2.ToString() && pick3 == winner3.ToString())
+                            YouWin();
+                        else
+                            YouLose();
+
+                        Console.ReadLine();
+                    }
+
+                    else if(quickPick == "2")
+                    {
+                        quickPick1 = rng.Next(0, 10); 
+                        quickPick2 = rng.Next(0, 10);
+                        quickPick3 = rng.Next(0, 10);
+
+                        Console.WriteLine(game);
+                        Console.WriteLine("You have selected Quick Pick. Your numbers are: ");
+                        Console.ForegroundColor = ConsoleColor.Green;
+                        Console.WriteLine(quickPick1);
+                        Thread.Sleep(1000);
+                        Console.WriteLine(quickPick2);
+                        Thread.Sleep(1000);
+                        Console.WriteLine(quickPick3);
+                        Console.WriteLine(); 
+
+                        Console.WriteLine("And the winning numbers are....");
+                        Console.ForegroundColor = ConsoleColor.Blue;
+                        Thread.Sleep(1000);
+                        Console.WriteLine(winner1);
+                        Thread.Sleep(1000);
+                        Console.WriteLine(winner2);
+                        Thread.Sleep(1000);
+                        Console.WriteLine(winner3);
+
+                        if (quickPick1.ToString() == winner1.ToString() && quickPick2.ToString() == winner2.ToString() && quickPick3.ToString() == winner3.ToString())
+                            YouWin();
+                        else
+                            YouLose();
+
+                        Console.ReadLine();
+                    }
+                    
                 }
 
                 else if (pick == "2")
