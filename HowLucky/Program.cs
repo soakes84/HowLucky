@@ -114,7 +114,8 @@ namespace HowLucky
                         Console.WriteLine(quickPick2);
                         Thread.Sleep(1000);
                         Console.WriteLine(quickPick3);
-                        Console.WriteLine(); 
+                        Console.WriteLine();
+                        Console.ForegroundColor = ConsoleColor.Gray;
 
                         Console.WriteLine("And the winning numbers are....");
                         Console.ForegroundColor = ConsoleColor.Blue;
